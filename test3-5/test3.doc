@@ -1,0 +1,14 @@
+การค้นหาทั่วไป จะแสดงรายชื่อ users ออกมาทั้งหมด
+db.getCollection('users').find();
+
+การค้นหาแบบเงื่อนไขเดียว ในที่นี้ให้หาชื่อ Bass
+db.users.find({user_name:'Bass'});
+
+การค้นหาแบบหลายเงื่อนไข ในที่นี้ให้หาชื่อ Bass ที่มี type เป็น admin
+db.users.find({name:'Bass', user_types
+
+การค้นหาโดยเอาแค่บางฟิลด์ ในที่นี้ให้หาชื่อ Bass ที่มี id = 1 และมี email = 1
+db.users.find({user_name:’Bass’}, {id:1,email:1});
+
+การค้นหาแบบนับจำนวน จะนับจำนวนเฉพาะคนที่มี user_type เป็น admin ออกมาเป็นตัวเลข
+db.users.find({user_type:’admin’}).count();
